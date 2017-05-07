@@ -11,6 +11,8 @@ $ sudo pip install --upgrade pip
 
 $ sudo pip install --upgrade virtualenv 
 
+$pip install pyzmail --user
+
 Download all the files and place them in a same repository and name it :
 Unotify.py
 
