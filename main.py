@@ -46,6 +46,7 @@ and then click next", "NEXT", "green")
     f = open("switch", "w")
     f.write("True")
     f.close()
+    MessageBox("Please restart your device", "NEXT", "green")
 
 
 while True:
