@@ -10,17 +10,19 @@ class SwitchWindow:
         self.window = window
         window.title("Unotify")
         tk.Label(window, text="      The app is currently:     ").pack()
-        file_data = self.read_from_file()
+        file_data = self.read_from_file().rstrip()
         if file_data == "True":
+            text = "ON"
             self.stat = True
-        if file_data == "False":
+        else:
+            text = "OFF"
             self.stat = False
-        self.text = tk.Label(window, text=file_data, fg="green")
+        self.text = tk.Label(window, text=text, fg="green")
         self.text.pack()
         tk.Button(window, text="SWITCH", command=self.switch).pack()
         tk.Label(window, text="Logged as " + self.address).pack()
         tk.Label(window, text=self.address, fg="green").pack()
-        tk.Button(window, text="Change account").pack()
+        tk.Button(window, text="Change account", command=self.change_account).pack()
         tk.mainloop()
 
     def switch(self):
