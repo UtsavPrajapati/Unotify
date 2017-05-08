@@ -48,7 +48,7 @@ class SwitchWindow:
         f.close()
 
     def read_from_file(self):
-        f = open("switch", "w")
+        f = open("switch", "r")
         a = f.read()
         f.close()
         return a
